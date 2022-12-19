@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        TextView textView = findViewById(R.id.textView);
+        EditText theText = findViewById(R.id.theText);
         EditText editText = findViewById(R.id.editText);
         Button btnEncrypt = findViewById(R.id.btn_encrypt);
         Button btnDecrypt = findViewById(R.id.btn_decrypt);
@@ -24,13 +24,13 @@ public class MainActivity extends AppCompatActivity {
         btnEncrypt.setOnClickListener(v ->
         {
             String text = editText.getText().toString();
-            textView.setText(enText.decText(text));
+            theText.setText(enText.decText(text)); // encrypt
         });
 
         btnDecrypt.setOnClickListener(v ->
         {
             String text = editText.getText().toString();
-            textView.setText(enText.encText(text));
+            theText.setText(enText.encText(text)); // decrypt
         });
 
 
